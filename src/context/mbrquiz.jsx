@@ -20,7 +20,7 @@ fetch("https://be-teste-tec-b5dc1a90bbd0.herokuapp.com/api/atividades/list")
 
             questions.push({
                 question: item.data[i].pergunta,
-                options: options,
+                options: suffleOptions,
                 answer: item.data[i].resposta_correta,
             });
         }
