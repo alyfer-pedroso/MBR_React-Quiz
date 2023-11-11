@@ -88,11 +88,21 @@ const quizReducer = (state, action) => {
             const newSuffleQuestions = state.questions.sort(() => {
                 return Math.random() - 0.5;
             });
+
             return {
                 gameStage: STAGES[0],
                 questions: newSuffleQuestions,
                 currentQuestion: 0,
                 username,
+                score: 0,
+            };
+
+        case "RESTART_QUIZ":
+            return {
+                gameStage: STAGES[1],
+                questions,
+                currentQuestion: 0,
+                username: localStorage.getItem("username"),
                 score: 0,
             };
 

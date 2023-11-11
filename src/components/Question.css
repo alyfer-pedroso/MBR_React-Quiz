@@ -11,18 +11,18 @@
     /* margin: 5rem; */
 }
 #question h2 {
-    color: #737373;
+    color: #e11859;
     text-align: center;
     margin: -1rem 0 2rem;
 }
 #question p {
-    color: #737373;
+    color: #0677bd;
     text-align: center;
     margin: 0rem 0 2rem;
 }
 #question button:hover {
-    background-color: #afafaf;
+    background-color: #029eff;
 }
 #question button:active {
-    background-color: #4d4d4d;
+    background-color: #033858;
 }

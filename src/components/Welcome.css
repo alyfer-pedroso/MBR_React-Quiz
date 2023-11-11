@@ -10,8 +10,24 @@
     max-width: 31.25rem;
     /* margin: 5rem; */
 }
+#welcome div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#welcome span {
+    display: flex;
+}
+#welcome span p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+#welcome img {
+    width: 80px;
+    text-align: center;
+}
 #welcome h2 {
-    color: #737373;
+    color: #0677bd;
     text-align: left;
 }
 #welcome input {
@@ -27,8 +43,8 @@
     outline-color: #4d4d4d;
 }
 #welcome button:hover {
-    background-color: #afafaf;
+    background-color: #029eff;
 }
 #welcome button:active {
-    background-color: #4d4d4d;
+    background-color: #033858;
 }

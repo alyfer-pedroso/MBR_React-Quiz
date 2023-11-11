@@ -17,11 +17,12 @@ const EndGame = () => {
                 <p>Erros</p>
                 <p>{(quizState.score - quizState.questions.length) * -1}</p>
             </span>
-            <span style={{ backgroundColor: "#737373" }}>
-                <p style={{ color: "#e3e3e3" }}>Porcentagem</p>
-                <p style={{ color: "#e3e3e3" }}>{(quizState.score / quizState.questions.length) * 100}%</p>
+            <span>
+                <p>Porcentagem</p>
+                <p>{(quizState.score / quizState.questions.length) * 100}%</p>
             </span>
-            <button onClick={() => dispatch({ type: "RESTART" })}>Reiniciar</button>
+            <button onClick={() => dispatch({ type: "RESTART_QUIZ" })}>Reiniciar Quiz</button>
+            <button onClick={() => dispatch({ type: "RESTART" })}>Página Inicial</button>
         </div>
     );
 };
