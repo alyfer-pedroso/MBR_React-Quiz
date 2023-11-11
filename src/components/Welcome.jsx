@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { MbrQuizContext } from "../context/mbrquiz";
+import Favicon from "../imgs/favicon.png";
 
 import "./Welcome.css";
 
@@ -42,7 +43,7 @@ const Welcome = () => {
     return (
         <div id="welcome" onLoad={typingTitle}>
             <div>
-                <img src="/src/imgs/favicon.png" alt="" />
+                <img src={Favicon} alt="" />
                 <span>MBR-Quiz</span>
             </div>
             <h2>Nome</h2>
