@@ -42,7 +42,7 @@ const Welcome = () => {
     return (
         <div id="welcome" onLoad={typingTitle}>
             <div>
-                <img src="../src/imgs/favicon.png" alt="" />
+                <img src="/src/imgs/favicon.png" alt="" />
                 <span>MBR-Quiz</span>
             </div>
             <h2>Nome</h2>
