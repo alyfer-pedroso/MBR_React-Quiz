@@ -60,7 +60,7 @@ const quizReducer = (state, action) => {
             };
 
         case "SHUFFLE_QUESTIONS":
-            const suffleQuestions = questions.sort(() => {
+            const suffleQuestions = state.questions.sort(() => {
                 return Math.random() - 0.5;
             });
 
@@ -85,9 +85,12 @@ const quizReducer = (state, action) => {
             };
 
         case "RESTART":
+            const newSuffleQuestions = state.questions.sort(() => {
+                return Math.random() - 0.5;
+            });
             return {
                 gameStage: STAGES[0],
-                questions,
+                questions: newSuffleQuestions,
                 currentQuestion: 0,
                 username,
                 score: 0,
