@@ -1,0 +1,27 @@
+.answer {
+    border-radius: 2rem;
+    border: 2px solid #737373;
+    background-color: white;
+    transition: 0.5s;
+    color: #737373;
+    text-align: center;
+    margin: 0rem 0 1rem;
+}
+#question p {
+    margin: 0;
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.answer:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.418);
+}
+
+.correct {
+    background-color: #e3e3e3;
+}
+.wrong {
+    background-color: #4d4d4d;
+}

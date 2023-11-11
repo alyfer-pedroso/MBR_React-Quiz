@@ -1,0 +1,14 @@
+#header {
+    background-color: #737373;
+    color: white;
+    height: 4.64875rem;
+    width: 100%;
+    margin-top: -2.5rem;
+    margin-bottom: 5rem;
+    border-bottom: 4px solid #4d4d4d;
+}
+#header h2 {
+    text-align: center;
+    margin: 0;
+    padding: 1.2rem;
+}
