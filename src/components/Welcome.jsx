@@ -6,7 +6,6 @@ import "./Welcome.css";
 
 const Welcome = () => {
     const [quizState, dispatch] = useContext(MbrQuizContext);
-    console.log(quizState);
 
     const startQuiz = () => {
         const name = document.querySelector("#welcome input").value;

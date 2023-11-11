@@ -20,4 +20,5 @@ button {
     background-color: #0677bd;
     border: none;
     border-radius: 2rem;
+    user-select: none;
 }

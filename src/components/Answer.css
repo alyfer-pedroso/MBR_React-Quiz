@@ -6,12 +6,14 @@
     color: #737373;
     text-align: center;
     margin: 0rem 0 1rem;
+    user-select: none;
 }
 #question p {
     margin: 0;
     padding: 1.5rem;
     font-size: 1rem;
     font-weight: bold;
+    user-select: none;
 }
 .answer:hover {
     transform: scale(1.1);

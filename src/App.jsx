@@ -15,7 +15,9 @@ function App() {
         dispatch({ type: "SHUFFLE_QUESTIONS" });
     }, []);
 
-    console.log(quizState.isAnswerSelected);
+    document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+    });
 
     return (
         <div className="App">

@@ -77,7 +77,7 @@ const quizReducer = (state, action) => {
             let isCorrectAnswer = 0;
 
             if (answer === option) isCorrectAnswer = 1;
-            console.log(answer, option);
+
             return {
                 ...state,
                 score: state.score + isCorrectAnswer,
