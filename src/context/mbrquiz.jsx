@@ -10,19 +10,49 @@ fetch("https://be-teste-tec-b5dc1a90bbd0.herokuapp.com/api/atividades/list")
         for (let i = 0; i < item.data.length; i++) {
             const options = [];
 
-            options.push(item.data[i].resposta_errada1);
-            options.push(item.data[i].resposta_correta);
-            options.push(item.data[i].resposta_errada2);
+            function random(numbers) {
+                return numbers[Math.floor(Math.random() * numbers.length)];
+            }
 
-            const suffleOptions = options.sort(() => {
-                return Math.random() - 0.5;
-            });
+            const randomNumber = random([0, 1, 2]);
 
-            questions.push({
-                question: item.data[i].pergunta,
-                options: suffleOptions,
-                answer: item.data[i].resposta_correta,
-            });
+            switch (randomNumber) {
+                case 0:
+                    options.push(item.data[i].resposta_errada1);
+                    options.push(item.data[i].resposta_correta);
+                    options.push(item.data[i].resposta_errada2);
+
+                    questions.push({
+                        question: item.data[i].pergunta,
+                        options: options,
+                        answer: item.data[i].resposta_correta,
+                    });
+                    break;
+
+                case 1:
+                    options.push(item.data[i].resposta_errada1);
+                    options.push(item.data[i].resposta_errada2);
+                    options.push(item.data[i].resposta_correta);
+
+                    questions.push({
+                        question: item.data[i].pergunta,
+                        options: options,
+                        answer: item.data[i].resposta_correta,
+                    });
+                    break;
+
+                case 2:
+                    options.push(item.data[i].resposta_correta);
+                    options.push(item.data[i].resposta_errada1);
+                    options.push(item.data[i].resposta_errada2);
+
+                    questions.push({
+                        question: item.data[i].pergunta,
+                        options: options,
+                        answer: item.data[i].resposta_correta,
+                    });
+                    break;
+            }
         }
     })
     .catch((err) => console.log(err));
@@ -85,25 +115,20 @@ const quizReducer = (state, action) => {
             };
 
         case "RESTART":
+            return initialState;
+
+        case "RESTART_QUIZ":
             const newSuffleQuestions = state.questions.sort(() => {
                 return Math.random() - 0.5;
             });
 
             return {
-                gameStage: STAGES[0],
-                questions: newSuffleQuestions,
-                currentQuestion: 0,
-                username,
-                score: 0,
-            };
-
-        case "RESTART_QUIZ":
-            return {
                 gameStage: STAGES[1],
-                questions,
+                questions: newSuffleQuestions,
                 currentQuestion: 0,
                 username: localStorage.getItem("username"),
                 score: 0,
+                isAnswerSelected: false,
             };
 
         default:
